@@ -1,0 +1,333 @@
+/* OH MY FOOD MAIN STYLE SHEET */
+/* reset lines */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* colour variables */
+/* font variables */
+/* mixins */
+/* base styling */
+body {
+  background: white;
+  max-width: 600px;
+  width: auto;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 8px;
+  color: black;
+  text-align: center;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: smaller;
+  font-weight: 100;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  padding: 2em 1em;
+  margin: 0 auto;
+}
+
+/* homepage styling */
+header {
+  margin: 0 auto;
+}
+
+img {
+  width: 50%;
+  height: 20%;
+  margin: 0.3em auto;
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: white;
+}
+
+#mapicon {
+  width: 100%;
+  height: auto;
+  margin: inherit;
+  padding: 2px;
+  display: block;
+  font-size: 0.8em;
+  line-height: 1.8em;
+  background-color: #d9d9d9;
+  border-top: 0.2px solid rgba(50, 50, 50, 0.2);
+  -webkit-box-shadow: inset 0px 0.7px 1px 0px grey;
+          box-shadow: inset 0px 0.7px 1px 0px grey;
+}
+
+i p {
+  display: inline;
+  padding-left: 1.2em;
+  font-weight: normal;
+}
+
+section {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background-color: #F2F2F2;
+}
+
+section p {
+  padding: 0 3em;
+}
+
+button {
+  width: auto;
+  height: auto;
+  padding: 0.8em 1.2em;
+  margin: 2em auto;
+  border-radius: 25px;
+  border-style: none;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  color: white;
+  -webkit-box-shadow: 0 2px 5px 2px lightgrey;
+          box-shadow: 0 2px 5px 2px lightgrey;
+}
+
+/* method section style */
+#method h5 {
+  padding: 2em 0;
+}
+
+.method-wrapper {
+  background-color: white;
+  text-align: left;
+  padding: 0 1.5em;
+}
+
+.step-wrapper {
+  width: auto;
+  height: auto;
+  background: #F2F2F2;
+  margin-bottom: 1.5em;
+  padding: 0.5em 0;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px 2px lightgrey;
+          box-shadow: 0 2px 5px 2px lightgrey;
+}
+
+.bulletpoint {
+  width: 3em;
+  height: 3em;
+  line-height: 3em;
+  padding: 0.3em 0.5em;
+  border-radius: 100%;
+  font-size: 0.7em;
+  background: #9356DC;
+  color: white;
+  position: relative;
+  left: -0.8em;
+}
+
+.step-wrapper i {
+  color: grey;
+  font-size: 0.9em;
+}
+
+.step-wrapper p {
+  display: inline;
+  font-size: 0.8em;
+  padding-left: 1em;
+}
+
+#step3 {
+  background: rgba(147, 86, 220, 0.25);
+}
+
+#step3 i {
+  color: #9356DC;
+}
+
+/*restaurant section */
+#restaus {
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+.restau-wrapper {
+  width: 90%;
+  height: 6rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 3fr 2fr 1fr 1fr;
+      grid-template-rows: 3fr 2fr 1fr 1fr;
+  -ms-grid-columns: 4fr 1fr;
+      grid-template-columns: 4fr 1fr;
+  grid-gap: 2px;
+  background: white;
+  margin: 1em;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 5px 2px lightgrey;
+          box-shadow: 0 2px 5px 2px lightgrey;
+}
+
+.restau-img {
+  padding: 0;
+  margin: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: black;
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.restau-wrapper span {
+  width: 4.5em;
+  height: 2em;
+  line-height: 1em;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0.8em;
+  font-size: smaller;
+  background: #99E2D0;
+  color: #278870;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#restau-name {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+#city-name {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+
+.restau-wrapper i {
+  width: 2em;
+  height: 2em;
+  padding-top: 0.5em;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  grid-row: 3/5;
+  position: relative;
+  left: 2em;
+}
+
+.restau-wrapper i::after {
+  opacity: 0;
+  content: '\f004';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #9356DC;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: -1em;
+  background: white;
+}
+
+.restau-wrapper i:hover::after {
+  opacity: 1;
+}
+
+/* restaurant images */
+#restau1-img {
+  background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") center no-repeat;
+  background-size: cover;
+}
+
+#restau2-img {
+  background: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") center no-repeat;
+  background-size: cover;
+}
+
+#restau3-img {
+  background: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center no-repeat;
+  background-size: cover;
+}
+
+#restau4-img {
+  background: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") center no-repeat;
+  background-size: cover;
+}
+
+/* footer */
+footer {
+  background: #262626;
+  text-align: left;
+  color: white;
+  font-size: 0.8em;
+}
+
+footer h4 {
+  font-family: "Shrikhand", cursive;
+  padding: 1em;
+}
+
+footer p {
+  padding: .3em 1em;
+}
+
+footer .icon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+#cutlery::before {
+  content: '\f2e7';
+  padding-right: 1.1em;
+}
+
+#partner::before {
+  content: '\f4c4';
+  padding-right: 0.5em;
+}
+
+.contactUs a,
+.contactUs a:visited,
+.contactUs a:hover {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=mainstyle-alt.css.map */
