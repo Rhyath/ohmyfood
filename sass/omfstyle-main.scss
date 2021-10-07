@@ -1,0 +1,199 @@
+   /* OH MY FOOD MAIN STYLE SHEET */               
+/* base styling */
+@import 'abstracts/mixins.scss';
+@import 'abstracts/colours.scss';
+@import 'base/reset.scss';
+@import 'base/typography.scss';
+@import 'layouts/footer.scss';
+
+   /* OH MY FOOD MAIN STYLE SHEET */               
+
+/* base styling */
+body {
+    background: $bgcolor;
+    max-width:600px;
+    width: auto;
+    margin: 0 auto;
+}
+
+/* homepage styling */
+header {
+    margin:0 auto;
+}
+
+img {
+    width:50%;
+    height:20%;
+    margin: 0.3em auto;
+    display:block;
+    object-fit:contain;
+    background-color:$bgcolor;
+
+}
+
+#mapicon {
+    width: 100%;
+    height: auto;
+    margin: inherit;
+    padding: 2px;
+    display: block;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    background-color: darken($bgcolor-alt, 10%);
+    border-top:0.2px solid rgba(50,50,50, 0.20);
+    box-shadow: inset 0px 0.7px 1px 0px grey;
+}
+
+
+/* method section style */
+#method h5 {
+    padding: 2em 0;
+}
+
+.step-wrapper {
+    width: auto;
+    height: auto;
+    background:$bgcolor-alt;
+    margin-bottom: 1.5em;
+    padding: 0.5em 0;
+    border-radius: 10px;
+    @include dropshadow;
+}
+
+.bulletpoint {
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
+    padding: 0.3em 0.5em;
+    border-radius:100%;
+    font-size: 0.7em;
+    background:$methodaccentcolor;
+    color: white;
+    position: relative;
+    left: -0.8em;
+}
+
+.step-wrapper i {
+    color:$txtcolor-alt;
+    font-size: 0.9em;
+}
+
+.step-wrapper p {
+    display: inline;
+    font-size:0.8em;
+    padding-left: 1em;
+}
+
+#step3 {
+    background: rgba($methodaccentcolor, 0.25);
+}
+
+#step3 i {
+    color: $methodaccentcolor;
+}
+
+/*restaurant section */
+#restaus {
+    text-align: left;
+    padding-bottom: 1em;
+}
+
+ .restau-wrapper {
+    width: 90%;
+    height: 6rem;
+    display: grid;
+    grid-template-rows: 3fr 2fr 1fr 1fr;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 2px;
+    background: $bgcolor;
+    margin: 1em;
+    border-radius: 10px;
+    @include dropshadow;
+ }
+
+ .restau-img {
+     padding: 0;
+     margin: 0;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+     background: black;
+     grid-column: 1/-1;
+     grid-row: 1/3;
+ }
+
+ .restau-wrapper span {
+     width: 4.5em;
+     height: 2em;
+     line-height: 1em;
+     text-align:center;
+     padding: 0.5em;
+     margin: 0.8em;
+     font-size:smaller;
+     background:$accentbgcolor;
+     color: darken($accentbgcolor, 40%);
+     grid-column: 2/3;
+     grid-row: 1/2;
+ }
+
+ #restau-name {
+     grid-column: 1/2;
+     grid-row: 3/4;
+ }
+
+ #city-name {
+     grid-column: 1/2;
+     grid-row: 4/5;
+ }
+
+ .restau-wrapper i {
+     width: 2em;
+     height: 2em;
+     padding-top: 0.5em;
+     grid-column: 2/3;
+     grid-row: 3/5;
+     position: relative;
+     left: 2em;
+ } 
+
+ .restau-wrapper i::after {
+     opacity:0;
+     content:'\f004';
+     font-family:"Font Awesome 5 Free";
+     font-weight: 900;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     color: $methodaccentcolor;
+     position:absolute;
+     top:0;
+     right:0;
+     bottom:0;
+     left:-1em;
+     background: $bgcolor;
+ }
+
+ .restau-wrapper i:hover::after{
+     opacity: 1;
+ }
+
+ /* restaurant images */
+ #restau1-img {
+     background: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg") center no-repeat;
+     background-size: cover;
+ }
+
+ #restau2-img {
+    background: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg") center no-repeat;
+    background-size: cover;
+}
+
+#restau3-img {
+    background: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg") center no-repeat;
+    background-size: cover;
+}
+
+#restau4-img {
+    background: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg") center no-repeat;
+    background-size: cover;
+}
+

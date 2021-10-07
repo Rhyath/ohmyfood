@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,OAAO,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,MAAM,EAAC,MAAM;EACb,gBAAgB,ECLN,OAAO;CDMpB;;AAED,AAAA,OAAO,CAAC,CAAC,CAAC;EACN,OAAO,EAAE,KAAK;CACjB;;AAED,AAAA,eAAe,CAAC;EACZ,gBAAgB,EAAE,KAAK;EACvB,UAAU,EAAC,IAAI;EACf,OAAO,EAAE,OAAO;CACnB",
+    "sources": [
+        "../sass/layouts/sections.scss",
+        "../sass/abstracts/colours.scss"
+    ],
+    "names": [],
+    "file": "sections.css"
+}

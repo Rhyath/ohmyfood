@@ -1,0 +1,37 @@
+footer {
+  background: #262626;
+  text-align: left;
+  color: white;
+  font-size: 0.8em;
+}
+
+footer p {
+  padding: .3em 1em;
+}
+
+footer .icon::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+#cutlery::before {
+  content: '\f2e7';
+  padding-right: 1.1em;
+}
+
+#partner::before {
+  content: '\f4c4';
+  padding-right: 0.5em;
+}
+
+.contactUs a,
+.contactUs a:visited,
+.contactUs a:hover {
+  text-decoration: none;
+  color: white;
+}
+/*# sourceMappingURL=footer.css.map */
