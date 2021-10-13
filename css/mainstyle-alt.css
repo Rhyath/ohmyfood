@@ -13,6 +13,7 @@ input, button, textarea, select {
 
 /* colour variables */
 /* font variables */
+/* animation variables */
 /* mixins */
 /* landing loading page */
 .loading-screen {
@@ -666,5 +667,51 @@ footer .icon::before {
   position: relative;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+/* menu card animation */
+.menu-drop {
+  opacity: 0;
+  -webkit-animation-name: dropping;
+          animation-name: dropping;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.menu-item-wrapper:nth-child(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.menu-item-wrapper:nth-child(1) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.menu-item-wrapper:nth-child(2) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+@-webkit-keyframes dropping {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropping {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=mainstyle-alt.css.map */

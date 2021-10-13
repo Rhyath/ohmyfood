@@ -26,6 +26,9 @@ $accenttxtcolor:teal;
 $text-font:'Roboto', sans-serif;
 $title-font:'Shrikhand', cursive;
 
+/* animation variables */
+$init-delay: 0.05s;
+
 /* mixins */
 @mixin dropshadow {
     box-shadow: 0 2px 5px 2px lightgrey;
@@ -578,6 +581,33 @@ footer .icon::before {
     align-content: center;
 }
 
+/* menu card animation */
 
+.menu-drop {
+    opacity:0;
+    animation-name: dropping;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.menu-item-wrapper:nth-child(3) {
+    animation-delay:0.5s;
+}
+.menu-item-wrapper:nth-child(1) {
+    animation-delay: 1s;
+}
+.menu-item-wrapper:nth-child(2) {
+    animation-delay: 1.2s;
+}
+
+@keyframes dropping {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 
