@@ -1,0 +1,65 @@
+/* menu selection animation */
+
+@import '../abstracts/colours.scss';
+@import '../base/typography.scss';
+@import '../components/buttons.scss';
+
+.food-categ-wrapper {
+    margin: 2em auto;
+    padding: 1em;
+    border-radius: 20px;
+    background-color: $bgcolor-alt;
+    text-align: left;
+}
+
+.menu-item-wrapper {
+    width: 80%;
+    height: 20%;
+    margin: 1em auto;
+    text-align: left;
+    background-color: $bgcolor;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+p {
+    display: inline-block;
+    padding: 0.6em 1em;
+    overflow: hidden;
+}
+
+.price {
+    padding: 1.1em;
+    position: relative;
+    float: right;
+    transition: all 0.5s ease-in;
+}
+
+.price::after {
+    margin: 0;
+    padding: 0.33em;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2em;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: "\f058";
+    background-color: $accentbgcolor;
+    color: $txtcolor-footer;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-item-wrapper:hover .price{
+    transform: translateX(-100%);
+}
+
+.menu-item-wrapper:hover .price::after {
+    transform: rotate(360deg);
+}

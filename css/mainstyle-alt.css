@@ -632,6 +632,7 @@ footer .icon::before {
   padding: 0.3em;
   border-radius: 15px;
   background-color: white;
+  overflow: hidden;
   -webkit-box-shadow: 0 2px 5px 2px lightgrey;
           box-shadow: 0 2px 5px 2px lightgrey;
 }
@@ -639,18 +640,20 @@ footer .icon::before {
 .menu-item-wrapper > h5 {
   margin: 0;
   padding: 0.2em 0.5em;
-  max-width: 12em;
+  max-width: 13em;
   font-size: 1em;
+  overflow: scroll;
 }
 
 .menu-item-wrapper > p {
   display: inline;
   margin: 0;
   padding: 0 0.6em;
-  max-width: 12em;
+  max-width: 13em;
   font-size: 0.8em;
   font-weight: 200;
   color: #676767;
+  overflow: scroll;
 }
 
 .price {
@@ -661,6 +664,8 @@ footer .icon::before {
   font-size: 0.8em;
   position: relative;
   float: right;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .section-wrapper button {
@@ -720,11 +725,14 @@ footer .icon::before {
 
 /* selection check animation */
 .price::after {
-  margin-left: 1em;
-  padding: 0.5em 1em;
-  height: 100%;
+  display: inline-block;
+  margin-left: 0.5em;
+  padding: 0.8em;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  position: absolute;
+  top: -150%;
+  left: 80%;
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 2em;
@@ -732,30 +740,22 @@ footer .icon::before {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+  content: "\f058";
   background-color: #99E2D0;
   color: white;
-  content: "\f058";
-  position: relative;
-  top: -0.75em;
-  left: 0.25em;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .menu-item-wrapper:hover .price {
-  -webkit-animation: checked 1s ease-in alternate;
-          animation: checked 1s ease-in alternate;
+  -webkit-transform: translateX(-224%);
+          transform: translateX(-224%);
 }
 
-@-webkit-keyframes checked {
-  0% {
-  }
-  100% {
-  }
-}
-
-@keyframes checked {
-  0% {
-  }
-  100% {
-  }
+.menu-item-wrapper:hover .price::after {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 /*# sourceMappingURL=mainstyle-alt.css.map */

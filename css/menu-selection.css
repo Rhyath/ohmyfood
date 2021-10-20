@@ -1,0 +1,112 @@
+/* menu selection animation */
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 8px;
+  color: black;
+  text-align: center;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: smaller;
+  font-weight: 100;
+}
+
+h4 {
+  font-family: "Shrikhand", cursive;
+  padding: 1em;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  padding: 2em 1em;
+  margin: 0 auto;
+}
+
+i p {
+  display: inline;
+  padding-left: 1.2em;
+  font-weight: normal;
+}
+
+button {
+  width: auto;
+  height: auto;
+  padding: 0.8em 1.2em;
+  margin: 2em auto;
+  border-radius: 25px;
+  border-style: none;
+  background: -webkit-gradient(linear, left top, right bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to right bottom, #FF79DA, #9356DC);
+  color: white;
+  -webkit-box-shadow: 0 2px 5px 2px lightgrey;
+          box-shadow: 0 2px 5px 2px lightgrey;
+}
+
+.food-categ-wrapper {
+  margin: 2em auto;
+  padding: 1em;
+  border-radius: 20px;
+  background-color: #F2F2F2;
+  text-align: left;
+}
+
+.menu-item-wrapper {
+  width: 80%;
+  height: 20%;
+  margin: 1em auto;
+  text-align: left;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+p {
+  display: inline-block;
+  padding: 0.6em 1em;
+  overflow: hidden;
+}
+
+.price {
+  padding: 1.1em;
+  position: relative;
+  float: right;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+.price::after {
+  margin: 0;
+  padding: 0.33em;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 2em;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: "\f058";
+  background-color: #99E2D0;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-item-wrapper:hover .price {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.menu-item-wrapper:hover .price::after {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+/*# sourceMappingURL=menu-selection.css.map */

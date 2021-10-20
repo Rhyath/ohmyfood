@@ -546,24 +546,27 @@ footer .icon::before {
     padding: 0.3em;
     border-radius: 15px;
     background-color: $bgcolor;
+    overflow:hidden;
     @include dropshadow;
 }
 
 .menu-item-wrapper > h5 {
     margin: 0;
     padding: 0.2em 0.5em;
-    max-width: 12em;
+    max-width: 13em;
     font-size: 1em;
+    overflow: scroll;
 }
 
 .menu-item-wrapper > p {
     display: inline;
     margin: 0;
     padding: 0 0.6em;
-    max-width: 12em;
+    max-width: 13em;
     font-size: 0.8em;
     font-weight: 200;
     color: darken($txtcolor-alt, 10%);
+    overflow: scroll;
 }
 
 .price {
@@ -574,6 +577,7 @@ footer .icon::before {
     font-size: 0.8em;
     position: relative;
     float: right;
+    transition: all 0.5s ease-in-out;
 }
 
 .section-wrapper button {
@@ -615,12 +619,16 @@ footer .icon::before {
 }
 
 /* selection check animation */
+
 .price::after {
-    margin-left: 1em; 
-    padding: 0.5em 1em;
-    height: 100%;
+    display:inline-block;
+    margin-left: 0.5em;
+    padding: 0.8em;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    position: absolute;
+    top: -150%;
+    left: 80%;
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
     font-size: 2em;
@@ -628,26 +636,17 @@ footer .icon::before {
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
+    content: "\f058";
     background-color: $accentbgcolor;
     color: $txtcolor-footer;
-    content: "\f058";
-    position: relative;
-    top: -0.75em;
-    left: 0.25em;
+    transition: transform 0.5s ease-in-out;
 }
 
-.menu-item-wrapper:hover {
-    .price {
-    animation: checked 1s ease-in alternate;
+.menu-item-wrapper:hover .price{
+    transform: translateX(-224%);
+    &::after{
+        transform: rotate(360deg);
     }
 }
 
-@keyframes checked {
-    0% {
-        
-    }
-    100% {
-        
-    }
-}
 
