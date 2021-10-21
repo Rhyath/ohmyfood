@@ -113,7 +113,9 @@ $init-delay: 0.05s;
 /* landing loading page */
 
 .loading-screen {
-    position: fixed;
+    position:fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
@@ -152,7 +154,7 @@ $init-delay: 0.05s;
 body {
     background: $bgcolor;
     min-width: 300px;
-    max-width:600px;
+    max-width:1000px;
     width: auto;
     margin: 0 auto;
     font-family:$text-font;
@@ -495,6 +497,9 @@ footer .icon::before {
     width: auto;
     height: 15rem;
     background-color: black;
+    position: relative;
+    top: 2em;
+    z-index: -1;
 }
 
 .menu-card {
@@ -502,8 +507,6 @@ footer .icon::before {
     height: auto;
     padding: 1em;
     border-radius: 20px;
-    position: relative;
-    top: -2rem;
     display: flex;
     flex-flow: column nowrap;
     align-content: flex-start;
@@ -539,9 +542,6 @@ footer .icon::before {
 .menu-item-wrapper {
     width: 100%;
     height: 20%;
-    /*display: grid;
-    grid-template: repeat(2, 1fr)/ repeat(3, 1fr);
-    grid-gap: 0.5em;*/
     margin: 1em 0;
     padding: 0.3em;
     border-radius: 15px;
@@ -649,4 +649,118 @@ footer .icon::before {
     }
 }
 
+/* ohmyfood media querries */
 
+@media all and (min-width:1000px) {
+    body{
+        min-width:900px;
+        max-width: none;
+    }
+
+    /* homepage styling */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    img {
+        width: 25%;
+        height: 10%;
+        margin: 0.5em 0.3em;
+    }
+
+    #mapicon {
+        width: 15%;
+        margin-right: 0.3em;
+        border-radius: 25px;
+    }
+
+    i, i>p {
+        font-size: 1.5em;
+    }
+
+    /*method section */
+    .method-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: space-between;
+    }
+
+    .step-wrapper {
+        width: 25%;
+    }
+
+    .method-wrapper>h5 {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    /*restaurant section*/
+    #restaus {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: space-between;
+        flex-basis: 40%;
+    }
+
+    #restaus>h5 {
+        align-self: flex-start;
+        width: 100%;
+    }
+
+    /*footer*/
+    footer {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1em;
+    }
+
+    footer>h4 {
+    align-self: center;
+    width: 100%; 
+    }
+
+    footer>p {
+        width: 15%;
+    }
+
+
+    /*menu page*/
+    .menu-card {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: space-between;
+    }
+
+    .menu-card>h4 {
+        align-self: flex-start;
+        width:100%;
+    }
+
+    .food-categ-wrapper {
+        margin: 1em;
+        width: 30%;
+    }
+
+    .menu-card>button {
+        align-self: center;
+        margin: 0 auto;
+    }
+
+    .menu-item-wrapper>h5 {
+        max-width: 18em;
+        overflow: scroll;
+    }
+    .menu-item-wrapper>p {
+        max-width: 10em;
+        overflow:hidden;
+    }
+
+}
