@@ -61,52 +61,62 @@ button {
   text-align: left;
   background-color: white;
   border-radius: 10px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 p {
   display: inline-block;
   padding: 0.6em 1em;
-  overflow: hidden;
-}
-
-.price {
-  padding: 1.1em;
-  position: relative;
-  float: right;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+  overflow: visible;
 }
 
 .price::after {
-  margin: 0;
-  padding: 0.33em;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2em;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  content: "\f058";
+  content: " ";
+  width: 1em;
+  height: 1em;
+  padding: 1em;
+  position: relative;
+  left: 4em;
+  display: flexbox;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #99E2D0;
-  color: white;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  z-index: 0;
 }
 
-.menu-item-wrapper:hover .price {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+i {
+  color: #9356DC;
+  font-size: 2em;
+  position: relative;
+  left: 4em;
+  z-index: 1;
+}
+
+.menu-item-wrapper:hover i {
+  -webkit-transform: translateX(-200%) rotate(360deg);
+          transform: translateX(-200%) rotate(360deg);
 }
 
 .menu-item-wrapper:hover .price::after {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+}
+
+.menu-item-wrapper:hover .price {
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
+i, .price, .price::after {
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  position: relative;
+  float: right;
 }
 /*# sourceMappingURL=menu-selection.css.map */

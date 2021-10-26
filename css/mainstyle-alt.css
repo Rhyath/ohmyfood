@@ -33,8 +33,8 @@ input, button, textarea, select {
           align-items: center;
   background: #F2F2F2;
   z-index: 10;
-  -webkit-animation: load-off 2600ms;
-          animation: load-off 2600ms;
+  -webkit-animation: load-off 1.2s;
+          animation: load-off 1.2s;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
   -webkit-animation-iteration-count: 1;
@@ -53,7 +53,7 @@ input, button, textarea, select {
 .loading-screen .icon {
   width: 6em;
   height: 6em;
-  position: absolute;
+  position: fixed;
   display: block;
   font-style: normal;
   font-variant: normal;
@@ -454,7 +454,7 @@ a:link, a:visited, a:hover {
   grid-row: 3/5;
   position: relative;
   left: 2em;
-  top: 1.5em;
+  top: 1em;
 }
 
 .restau-wrapper i::after {
@@ -626,6 +626,7 @@ footer .icon::before {
 }
 
 .menu-item-wrapper {
+  position: relative;
   width: 100%;
   height: 20%;
   margin: 1em 0;
@@ -640,20 +641,18 @@ footer .icon::before {
 .menu-item-wrapper > h5 {
   margin: 0;
   padding: 0.2em 0.5em;
-  max-width: 13em;
+  max-width: 18em;
   font-size: 1em;
-  overflow: scroll;
 }
 
 .menu-item-wrapper > p {
-  display: inline;
+  display: inline-block;
   margin: 0;
   padding: 0 0.6em;
-  max-width: 13em;
+  max-width: 22em;
   font-size: 0.8em;
   font-weight: 200;
   color: #676767;
-  overflow: scroll;
 }
 
 .price {
@@ -664,8 +663,6 @@ footer .icon::before {
   font-size: 0.8em;
   position: relative;
   float: right;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
 .section-wrapper button {
@@ -724,39 +721,62 @@ footer .icon::before {
 }
 
 /* selection check animation */
+.menu-item-wrapper > i {
+  font-size: 1.5em;
+  position: absolute;
+  left: 100%;
+  top: 25%;
+  color: white;
+  z-index: 11;
+}
+
 .price::after {
-  display: inline-block;
   margin-left: 0.5em;
-  padding: 0.8em;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  padding: 1.5em;
+  width: 2em;
+  height: 2em;
   position: absolute;
   top: -150%;
-  left: 80%;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-  font-size: 2em;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  content: "\f058";
+  left: 100%;
+  content: " ";
   background-color: #99E2D0;
-  color: white;
+  z-index: 10;
+}
+
+.menu-item-wrapper:hover .fa-check-circle,
+.menu-item-wrapper:focus .fa-check-circle {
+  -webkit-transform: translateX(-150%) rotate(360deg);
+          transform: translateX(-150%) rotate(360deg);
+}
+
+.menu-item-wrapper:hover .price::after,
+.menu-item-wrapper:focus .price::after {
+  -webkit-transform: translateX(-30%);
+          transform: translateX(-30%);
+  margin-left: 1.5em;
+}
+
+.menu-item-wrapper:hover .price,
+.menu-item-wrapper:focus .price {
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+
+.menu-item-wrapper:hover h5, .menu-item-wrapper:hover p,
+.menu-item-wrapper:focus h5,
+.menu-item-wrapper:focus p {
+  max-width: 12rem;
+  padding-top: 0.2em;
+  text-overflow: ellipsis;
+  white-space: pre;
+  overflow: hidden;
+}
+
+.fa-check-circle, .price, .price::after {
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-}
-
-.menu-item-wrapper:hover .price {
-  -webkit-transform: translateX(-224%);
-          transform: translateX(-224%);
-}
-
-.menu-item-wrapper:hover .price::after {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
 }
 
 /* ohmyfood media querries */
@@ -764,6 +784,11 @@ footer .icon::before {
   body {
     min-width: 900px;
     max-width: none;
+  }
+  .loading-screen .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
   /* homepage styling */
   header {
@@ -889,13 +914,23 @@ footer .icon::before {
         align-self: center;
     margin: 0 auto;
   }
+  /*.menu-item-wrapper {
+        max-height: fit-content;
+        padding-bottom: 1em;
+    }*/
   .menu-item-wrapper > h5 {
-    max-width: 18em;
-    overflow: scroll;
+    max-width: 20em;
   }
   .menu-item-wrapper > p {
-    max-width: 10em;
+    max-width: 22em;
+    font-size: 0.7em;
+  }
+  .menu-item-wrapper:hover p {
+    max-width: 16em;
+    white-space: pre;
+    text-overflow: ellipsis;
     overflow: hidden;
+    padding-top: 0.1em;
   }
 }
 /*# sourceMappingURL=mainstyle-alt.css.map */

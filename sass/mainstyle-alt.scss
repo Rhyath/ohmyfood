@@ -46,7 +46,7 @@ $init-delay: 0.05s;
       .icon {
         width: 6em;
         height: 6em;
-        position: absolute;
+        position: fixed;
         display: block;
         font-style: normal;
         font-variant: normal;
@@ -124,7 +124,7 @@ $init-delay: 0.05s;
     background: $bgcolor-alt;
     z-index: 10;
     @include loading;
-    animation: load-off 2600ms;
+    animation: load-off 1.2s;
     animation-delay: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -386,7 +386,7 @@ a:link, a:visited, a:hover {
      grid-row: 3/5;
      position: relative;
      left: 2em;
-     top: 1.5em;
+     top: 1em;
  } 
 
  .restau-wrapper i::after {
@@ -540,6 +540,7 @@ footer .icon::before {
 }
 
 .menu-item-wrapper {
+    position: relative;
     width: 100%;
     height: 20%;
     margin: 1em 0;
@@ -553,20 +554,18 @@ footer .icon::before {
 .menu-item-wrapper > h5 {
     margin: 0;
     padding: 0.2em 0.5em;
-    max-width: 13em;
+    max-width: 18em;
     font-size: 1em;
-    overflow: scroll;
 }
 
 .menu-item-wrapper > p {
-    display: inline;
+    display: inline-block;
     margin: 0;
     padding: 0 0.6em;
-    max-width: 13em;
+    max-width: 22em;
     font-size: 0.8em;
     font-weight: 200;
     color: darken($txtcolor-alt, 10%);
-    overflow: scroll;
 }
 
 .price {
@@ -577,7 +576,6 @@ footer .icon::before {
     font-size: 0.8em;
     position: relative;
     float: right;
-    transition: all 0.5s ease-in-out;
 }
 
 .section-wrapper button {
@@ -619,34 +617,50 @@ footer .icon::before {
 }
 
 /* selection check animation */
-
+.menu-item-wrapper > i {
+    font-size: 1.5em;
+    position: absolute;
+    left: 100%;
+    top: 25%;
+    color: $txtcolor-footer;
+    z-index: 11;
+}
 .price::after {
-    display:inline-block;
     margin-left: 0.5em;
-    padding: 0.8em;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    padding: 1.5em;
+    width: 2em;
+    height: 2em;
     position: absolute;
     top: -150%;
-    left: 80%;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 2em;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    content: "\f058";
+    left: 100%;
+    content: " ";
     background-color: $accentbgcolor;
-    color: $txtcolor-footer;
-    transition: transform 0.5s ease-in-out;
+    z-index: 10;
 }
 
-.menu-item-wrapper:hover .price{
-    transform: translateX(-224%);
-    &::after{
-        transform: rotate(360deg);
+.menu-item-wrapper:hover,
+.menu-item-wrapper:focus {
+    .fa-check-circle {
+        transform:translateX(-150%)  rotate(360deg) ;
     }
+    .price::after {
+        transform: translateX(-30%);
+        margin-left: 1.5em;
+    }
+    .price {
+        transform: translateX(-150%);
+    }
+    h5, p {
+        max-width: 12rem;
+        padding-top: 0.2em;
+        text-overflow: ellipsis;
+        white-space: pre;
+        overflow: hidden;
+    }
+}
+
+.fa-check-circle, .price, .price::after{
+    transition: transform 0.5s ease-in-out;
 }
 
 /* ohmyfood media querries */
@@ -657,6 +671,11 @@ footer .icon::before {
         max-width: none;
     }
 
+    .loading-screen .icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
     /* homepage styling */
     header {
         display: flex;
@@ -754,13 +773,26 @@ footer .icon::before {
         margin: 0 auto;
     }
 
+    /*.menu-item-wrapper {
+        max-height: fit-content;
+        padding-bottom: 1em;
+    }*/
+
     .menu-item-wrapper>h5 {
-        max-width: 18em;
-        overflow: scroll;
-    }
-    .menu-item-wrapper>p {
-        max-width: 10em;
-        overflow:hidden;
+        max-width: 20em;
     }
 
+    .menu-item-wrapper>p {
+        max-width: 22em;
+        font-size: 0.7em;
+    }
+
+    .menu-item-wrapper:hover p{
+        max-width: 16em;
+        white-space: pre;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        padding-top: 0.1em;
+    }
 }
+ 
