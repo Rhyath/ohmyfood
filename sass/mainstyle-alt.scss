@@ -110,6 +110,15 @@ $init-delay: 0.05s;
       }
 }
 
+@mixin Favicon {
+    @if (input[type="checkbox"]:checked){
+        font-weight: 900;
+        color: $methodaccentcolor;
+    }@else{
+        font-weight:400;
+    }
+}
+
 /* landing loading page */
 
 .loading-screen {
@@ -377,8 +386,8 @@ a:link, a:visited, a:hover {
      font-weight: 100;
  }
 
-
- .restau-wrapper i {
+ input[type="checkbox"] {
+     appearance: none;
      width: 2em;
      height: 2em;
      padding-top: 0.5em;
@@ -389,25 +398,25 @@ a:link, a:visited, a:hover {
      top: 1em;
  } 
 
- .restau-wrapper i::after {
-     opacity:0;
+ input[type="checkbox"]::after {
      content:'\f004';
      font-family:"Font Awesome 5 Free";
-     font-weight: 900;
+     font-weight: 300;
+     font-size: 1.2em;
      display:flex;
      justify-content: center;
      align-items: center;
-     color: $methodaccentcolor;
      position:absolute;
      top:0;
      right:0;
      bottom:0;
      left:-1em;
-     background: $bgcolor;
  }
 
- .restau-wrapper i:hover::after{
-     opacity: 1;
+ input[type="checkbox"]:hover::after,
+ input[type="checkbox"]:checked::after{
+     font-weight: 900;
+     color: $methodaccentcolor;
  }
 
  /* restaurant images */
@@ -527,6 +536,7 @@ footer .icon::before {
     content: '\f004';
     position: relative;
     float: right;
+    @include Favicon;
 }
 
 .food-categ-wrapper {

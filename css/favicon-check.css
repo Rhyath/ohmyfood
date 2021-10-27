@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 8px;
+  color: black;
+  text-align: center;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: smaller;
+  font-weight: 100;
+}
+
+h4 {
+  font-family: "Shrikhand", cursive;
+  padding: 1em;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  padding: 2em 1em;
+  margin: 0 auto;
+}
+
+i p {
+  display: inline;
+  padding-left: 1.2em;
+  font-weight: normal;
+}
+
+body {
+  background: #F2F2F2;
+  min-width: 300px;
+  max-width: 1000px;
+  width: auto;
+  margin: 5em auto;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  color: black;
+}
+
+.menu-card {
+  width: auto;
+  height: auto;
+  padding: 1em;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  text-align: left;
+  background-color: white;
+}
+
+.section-wrapper h4 {
+  margin: 0.5em 0 1em;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 2em;
+  height: 2em;
+  padding-top: 0.5em;
+}
+
+input[type="checkbox"]::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  content: '\f004';
+  position: relative;
+  float: right;
+  font-weight: 900;
+  color: #9356DC;
+}
+/*# sourceMappingURL=favicon-check.css.map */

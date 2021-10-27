@@ -1,0 +1,95 @@
+@import "../base/reset.scss";
+@import "../base/typography.scss";
+@import "../abstracts/colours.scss";
+
+@mixin Favicon-Checked {
+    @if (input[type="checkbox"]:checked){
+           font-weight: 900;
+           color: $methodaccentcolor;
+    }
+}
+
+body {
+    background: $bgcolor-alt;
+    min-width: 300px;
+    max-width:1000px;
+    width: auto;
+    margin: 5em auto;
+    font-family:$text-font;
+    font-weight: 100;
+    font-size: 16px;
+    color:$txtcolor;
+}
+
+.menu-card {
+    width: auto;
+    height: auto;
+    padding: 1em;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: flex-start;
+    text-align: left;
+    background-color:$bgcolor;
+}
+
+.section-wrapper h4 {
+    margin: 0.5em 0 1em;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: 2em;
+    height: 2em;
+    padding-top: 0.5em;
+} 
+
+input[type="checkbox"]::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 400;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: '\f004';
+    position: relative;
+    float: right;
+    @include Favicon-Checked;
+}
+
+
+ /* 
+.restau-wrapper i {
+    width: 2em;
+    height: 2em;
+    padding-top: 0.5em;
+    grid-column: 2/3;
+    grid-row: 3/5;
+    position: relative;
+    left: 2em;
+    top: 1em;
+}
+
+ .restau-wrapper i::after {
+     opacity:0;
+     content:'\f004';
+     font-family:"Font Awesome 5 Free";
+     font-weight: 900;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     color: $methodaccentcolor;
+     position:absolute;
+     top:0;
+     right:0;
+     bottom:0;
+     left:-1em;
+     background: $bgcolor;
+ }
+
+ .restau-wrapper i:hover::after{
+     opacity: 1;
+ }
+  */
+
+
