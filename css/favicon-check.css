@@ -98,4 +98,38 @@ input[type="checkbox"]::after {
   font-weight: 900;
   color: #9356DC;
 }
+
+/* 
+.restau-wrapper i {
+    width: 2em;
+    height: 2em;
+    padding-top: 0.5em;
+    grid-column: 2/3;
+    grid-row: 3/5;
+    position: relative;
+    left: 2em;
+    top: 1em;
+}
+
+ .restau-wrapper i::after {
+     opacity:0;
+     content:'\f004';
+     font-family:"Font Awesome 5 Free";
+     font-weight: 900;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     color: $methodaccentcolor;
+     position:absolute;
+     top:0;
+     right:0;
+     bottom:0;
+     left:-1em;
+     background: $bgcolor;
+ }
+
+ .restau-wrapper i:hover::after{
+     opacity: 1;
+ }
+  */
 /*# sourceMappingURL=favicon-check.css.map */

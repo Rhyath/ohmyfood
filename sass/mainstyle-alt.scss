@@ -110,15 +110,6 @@ $init-delay: 0.05s;
       }
 }
 
-@mixin Favicon {
-    @if (input[type="checkbox"]:checked){
-        font-weight: 900;
-        color: $methodaccentcolor;
-    }@else{
-        font-weight:400;
-    }
-}
-
 /* landing loading page */
 
 .loading-screen {
@@ -223,17 +214,16 @@ img {
     margin: inherit;
     padding: 2px;
     display: block;
-    font-size: 0.8em;
     line-height: 1.8em;
     background-color: darken($bgcolor-alt, 10%);
     border-top:0.2px solid rgba(50,50,50, 0.20);
     box-shadow: inset 0px 0.7px 1px 0px grey;
 }
 
-i p {
+#mapicon i, #mapicon p {
     display: inline;
-    padding-left: 1.2em;
-    font-weight:normal;
+    font-size: 1em;
+    padding: 0 0.3em;
 }
 
 #marketing {
@@ -250,8 +240,8 @@ i p {
     padding-bottom: 1em;
 }
 
-button 
-{
+.button, button {
+    display: inline-block;
     width: auto;
     height: auto;
     padding: 1rem 3rem;
@@ -260,7 +250,7 @@ button
     border-style:none;
     font-weight: bold;
     background: $buttonaccentcolor;
-    color: white;
+    color: $txtcolor-footer;
     @include dropshadow;
 }
 
@@ -327,7 +317,9 @@ a:link, a:visited, a:hover {
     text-decoration:none;
     color: inherit;
 }
-
+#marketing a:link, #marketing a:visited, #marketing a:hover {
+    color: $txtcolor-footer;
+}
 
  .restau-wrapper {
     width: 90%;
@@ -536,7 +528,6 @@ footer .icon::before {
     content: '\f004';
     position: relative;
     float: right;
-    @include Favicon;
 }
 
 .food-categ-wrapper {
@@ -701,13 +692,9 @@ footer .icon::before {
     }
 
     #mapicon {
-        width: 15%;
+        width: 20%;
         margin-right: 0.3em;
         border-radius: 25px;
-    }
-
-    i, i>p {
-        font-size: 1.5em;
     }
 
     /*method section */
@@ -734,6 +721,7 @@ footer .icon::before {
         justify-content: space-around;
         align-content: space-between;
         flex-basis: 40%;
+        gap: 5%;
     }
 
     #restaus>h5 {
