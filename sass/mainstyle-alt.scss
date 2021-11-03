@@ -15,6 +15,7 @@ $bgcolor: white;
 $bgcolor-alt: #F2F2F2;
 $accentbgcolor: #99E2D0;
 $buttonaccentcolor: linear-gradient(to right bottom, #FF79DA, #9356DC);
+$buttonaccentcolor-hover: linear-gradient(to right bottom,lighten(#FF79DA, 2%),lighten( #9356DC,2%));
 $methodaccentcolor: #9356DC;
 $favaccentcolor: linear-gradient(to right top, #FF79DA, #9356DC);
 $txtcolor: black;
@@ -252,6 +253,11 @@ img {
     background: $buttonaccentcolor;
     color: $txtcolor-footer;
     @include dropshadow;
+}
+
+.button:hover, button:hover {
+    background: $buttonaccentcolor-hover;
+     box-shadow: 2px 2px 5px grey;
 }
 
 /* method section style */
@@ -651,6 +657,7 @@ footer .icon::before {
     .price {
         transform: translateX(-150%);
     }
+
     h5, p {
         max-width: 12rem;
         padding-top: 0.2em;
@@ -770,11 +777,6 @@ footer .icon::before {
         align-self: center;
         margin: 0 auto;
     }
-
-    /*.menu-item-wrapper {
-        max-height: fit-content;
-        padding-bottom: 1em;
-    }*/
 
     .menu-item-wrapper>h5 {
         max-width: 20em;

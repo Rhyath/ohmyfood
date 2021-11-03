@@ -303,6 +303,13 @@ img {
           box-shadow: 0 2px 5px 2px lightgrey;
 }
 
+.button:hover, button:hover {
+  background: -webkit-gradient(linear, left top, right bottom, from(#ff83dd), to(#985ede));
+  background: linear-gradient(to right bottom, #ff83dd, #985ede);
+  -webkit-box-shadow: 2px 2px 5px grey;
+          box-shadow: 2px 2px 5px grey;
+}
+
 /* method section style */
 #method h5 {
   padding: 2em 0;
@@ -919,10 +926,6 @@ footer .icon::before {
         align-self: center;
     margin: 0 auto;
   }
-  /*.menu-item-wrapper {
-        max-height: fit-content;
-        padding-bottom: 1em;
-    }*/
   .menu-item-wrapper > h5 {
     max-width: 20em;
   }
