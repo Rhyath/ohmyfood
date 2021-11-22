@@ -17,6 +17,7 @@ input, button, textarea, select {
 /* mixins */
 /* landing loading page */
 .loading-screen {
+  padding: 2em;
   position: fixed;
   top: 0;
   left: 0;
@@ -198,11 +199,12 @@ input, button, textarea, select {
 
 /* base styling */
 body {
-  background: white;
+  background: #262626;
   min-width: 300px;
   max-width: 1000px;
   width: auto;
   margin: 0 auto;
+  padding: 1em auto;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 16px;
@@ -242,12 +244,14 @@ section p {
 header {
   margin: 0 auto;
   text-align: center;
+  background: white;
 }
 
 img {
   width: 50%;
   height: 20%;
-  margin: 0.3em auto;
+  padding-top: 0.5em;
+  margin: 0.75em auto;
   display: block;
   -o-object-fit: contain;
      object-fit: contain;
@@ -525,6 +529,7 @@ footer {
   text-align: left;
   color: white;
   font-size: 0.8em;
+  padding-bottom: 1em;
 }
 
 footer h4 {
@@ -575,7 +580,7 @@ footer .icon::before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  align-text: center;
+  text-align: center;
 }
 
 .navigation a i {
@@ -592,7 +597,6 @@ footer .icon::before {
   height: 15rem;
   background-color: black;
   position: relative;
-  top: 2em;
   z-index: -1;
 }
 
@@ -600,7 +604,10 @@ footer .icon::before {
   width: auto;
   height: auto;
   padding: 1em;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: relative;
+  top: -2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -820,7 +827,7 @@ footer .icon::before {
   img {
     width: 25%;
     height: 10%;
-    margin: 0.5em 0.3em;
+    margin: 0 0.3em 0.5em;
   }
   #mapicon {
     width: 20%;
@@ -886,7 +893,6 @@ footer .icon::before {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-bottom: 1em;
   }
   footer > h4 {
     -ms-flex-item-align: center;
